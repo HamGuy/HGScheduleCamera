@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmq-69-hYO">
+                                <rect key="frame" x="16" y="119" width="94" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="HPp-I2-ScZ"/>
+                                    <constraint firstAttribute="height" constant="35" id="JlH-rU-YqB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="开始拍摄"/>
+                                <connections>
+                                    <action selector="startCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sTg-3T-rO6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDD-FQ-dD3">
+                                <rect key="frame" x="283" y="119" width="94" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="2Tu-Jr-QAx"/>
+                                    <constraint firstAttribute="height" constant="35" id="4T0-Iv-7dv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="停止拍摄"/>
+                                <connections>
+                                    <action selector="stopCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enV-wG-OHj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前照片数:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-NT-AAX">
+                                <rect key="frame" x="16" y="174" width="361" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZvU-aQ-6y5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="emZ-jG-jZ9">
+                                <rect key="frame" x="16" y="219" width="361" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="pI6-l5-Yvf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tmq-69-hYO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="06t-JD-ZED"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WDD-FQ-dD3" secondAttribute="trailing" constant="16" id="2QQ-4H-dry"/>
+                            <constraint firstItem="WDD-FQ-dD3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="H7j-IQ-Glb"/>
+                            <constraint firstItem="NRc-NT-AAX" firstAttribute="top" secondItem="tmq-69-hYO" secondAttribute="bottom" constant="20" id="JtP-sx-dxZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emZ-jG-jZ9" secondAttribute="trailing" constant="16" id="RL7-1a-XP1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NRc-NT-AAX" secondAttribute="trailing" constant="16" id="Se9-bN-8Zs"/>
+                            <constraint firstItem="NRc-NT-AAX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SjZ-Oz-7dX"/>
+                            <constraint firstItem="tmq-69-hYO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="WNK-UJ-uBm"/>
+                            <constraint firstItem="emZ-jG-jZ9" firstAttribute="top" secondItem="NRc-NT-AAX" secondAttribute="bottom" constant="24" id="rKE-lG-dlS"/>
+                            <constraint firstItem="emZ-jG-jZ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xOa-B1-gyC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="preViewImageView" destination="emZ-jG-jZ9" id="Z9N-tx-6tb"/>
+                        <outlet property="startButton" destination="tmq-69-hYO" id="u5F-Yg-C1r"/>
+                        <outlet property="statusLabel" destination="NRc-NT-AAX" id="zod-jO-0nu"/>
+                        <outlet property="stopButton" destination="WDD-FQ-dD3" id="uIG-xk-oO8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
